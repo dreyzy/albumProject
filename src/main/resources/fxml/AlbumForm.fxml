@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="584.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.albumProjectFinal.controller.AlbumController">
+   <children>
+      <AnchorPane prefHeight="72.0" prefWidth="1166.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="528.0" layoutY="27.0" text="ALBUM INVENTORY " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="26.0" layoutY="92.0" prefHeight="467.0" prefWidth="241.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="30.0" layoutY="19.0" text="Product Id" />
+            <Label layoutX="33.0" layoutY="58.0" text="Album" />
+            <Label layoutX="33.0" layoutY="100.0" text="Artist" />
+            <Label layoutX="33.0" layoutY="135.0" text="Type" />
+            <Label layoutX="33.0" layoutY="177.0" text="PRice" />
+            <Label layoutX="33.0" layoutY="221.0" text="Stocks" />
+            <Label layoutX="32.0" layoutY="259.0" text="Status" />
+            <Button fx:id="saveBtn" layoutX="61.0" layoutY="356.0" mnemonicParsing="false" onAction="#saveAction" text="SAve" />
+            <Button fx:id="editBtn" layoutX="137.0" layoutY="356.0" mnemonicParsing="false" onAction="#editAction" text="Edit" />
+            <Button fx:id="deleteBtn" layoutX="60.0" layoutY="397.0" mnemonicParsing="false" onAction="#deleteAction" text="DELETE" />
+            <Button fx:id="clearBtn" layoutX="137.0" layoutY="397.0" mnemonicParsing="false" onAction="#clearAction" text="Clear" />
+            <TextField fx:id="prodId" layoutX="101.0" layoutY="14.0" prefHeight="26.0" prefWidth="110.0" />
+            <TextField fx:id="albumId" layoutX="101.0" layoutY="53.0" prefHeight="26.0" prefWidth="110.0" />
+            <TextField fx:id="artistId" layoutX="101.0" layoutY="95.0" prefHeight="26.0" prefWidth="110.0" />
+            <TextField fx:id="priceId" layoutX="101.0" layoutY="172.0" prefHeight="26.0" prefWidth="110.0" />
+            <ComboBox fx:id="statusId" layoutX="105.0" layoutY="254.0" prefHeight="26.0" prefWidth="101.0" />
+            <Label layoutX="32.0" layoutY="295.0" text="Country" />
+            <TextField fx:id="countryId" layoutX="100.0" layoutY="290.0" prefHeight="26.0" prefWidth="110.0" />
+            <TextField fx:id="stocksId" layoutX="100.0" layoutY="216.0" prefHeight="26.0" prefWidth="110.0" />
+            <ComboBox fx:id="typeId" layoutX="104.0" layoutY="130.0" prefHeight="26.0" prefWidth="101.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="296.0" layoutY="92.0" prefHeight="467.0" prefWidth="593.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TableView fx:id="album_table" layoutX="57.0" layoutY="70.0" onMouseClicked="#formClicked" prefHeight="467.2" prefWidth="374.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="prodIdcol" prefWidth="75.0" text="PROD ID" />
+                <TableColumn fx:id="albumcol" prefWidth="71.20001220703125" text="ALBUM" />
+                  <TableColumn fx:id="artistcol" prefWidth="71.20001220703125" text="ARTIST" />
+                  <TableColumn fx:id="typecol" prefWidth="71.20001220703125" text="TYPE" />
+                  <TableColumn fx:id="pricecol" prefWidth="71.20001220703125" text="PRICE" />
+                  <TableColumn fx:id="stockscol" prefWidth="71.20001220703125" text="STOCKS" />
+                  <TableColumn fx:id="statuscol" prefWidth="71.20001220703125" text="STATUS" />
+                  <TableColumn fx:id="datecol" prefWidth="85.60000000000002" text="COUNTRY" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="invform" layoutX="910.0" layoutY="92.0" prefHeight="467.0" prefWidth="241.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="63.0" layoutY="65.0" text="Album" />
+            <Label layoutX="63.0" layoutY="107.0" text="Artist" />
+            <Label layoutX="63.0" layoutY="142.0" text="Type" />
+            <Label layoutX="63.0" layoutY="184.0" text="PRice" />
+            <Label layoutX="63.0" layoutY="228.0" text="Stocks" />
+            <Label layoutX="62.0" layoutY="266.0" text="Status" />
+            <Label layoutX="64.0" layoutY="302.0" text="Quantity" />
+            <Spinner fx:id="quantityinv" layoutX="130.0" layoutY="297.0" prefHeight="26.0" prefWidth="76.0" />
+            <Button fx:id="buybtn" layoutX="121.0" layoutY="358.0" mnemonicParsing="false" onAction="#buyAction" text="Buy" />
+            <Label fx:id="albuminv" layoutX="139.0" layoutY="65.0" text="Album" />
+            <Label fx:id="artistinv" layoutX="139.0" layoutY="107.0" text="Album" />
+            <Label fx:id="typeinv" layoutX="150.0" layoutY="142.0" text="Album" />
+            <Label fx:id="priceinv" layoutX="150.0" layoutY="184.0" text="Album" />
+            <Label fx:id="stocksinv" layoutX="150.0" layoutY="228.0" text="Album" />
+            <Label fx:id="statusinv" layoutX="150.0" layoutY="266.0" text="Album" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
